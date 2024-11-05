@@ -60,6 +60,8 @@ SD-UI는 **미리 정의된 UI 패턴**을 제공하여, 반복적인 작업을 
 - ✔️ **재사용성**: 기본 컴포넌트를 재사용 가능하게 하여 개발 공수를 절감
 - ✔️ **일관성**: 전체 UI에서 동일한 디자인 패턴을 유지하여 사용자 경험을 개선
 
+---
+
 #### 예시 코드:
 ```javascript
 import React from 'react';
@@ -74,6 +76,7 @@ const Button = ({ label, onClick, type = 'primary' }) => {
 export default Button;
 ```
 
+---
 
 ## 🎨 테마 관리 및 스타일 적용
 테마와 스타일을 미리 정의해 손쉽게 UI의 일관성을 유지하고, 브랜드 컬러와 스타일을 반영할 수 있습니다.
@@ -97,6 +100,8 @@ export const ThemeProvider = ({ children }) => {
 
 export const useTheme = () => useContext(ThemeContext);
 ```
+
+---
 
 ## 🚀 배포 프로세스 단축
 SD-UI를 통해 배포 없이도 관리자 페이지에서 DB 값만으로 프론트엔드 일부를 수정할 수 있습니다.
@@ -156,6 +161,8 @@ interface UIComponent {
   children?: UIComponent[];
 }
 ```
+
+---
 
 ### 2. 렌더러 구현
 렌더러를 구현하여 각 컴포넌트를 동적으로 렌더링합니다.
