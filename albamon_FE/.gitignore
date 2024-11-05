@@ -18,7 +18,7 @@ yarn-error.log*
 # OS and Editor specific files
 .DS_Store
 *.log
-.idea
+.idea/
 .vscode
 
 # Environment files
