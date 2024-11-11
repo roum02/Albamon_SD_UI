@@ -1,11 +1,18 @@
 import { ApolloServer } from "apollo-server";
-import { resolvers, typeDefs } from "./schema/index.js";
+import { typeDefs, resolvers } from "./schema/index.js";
+
+const port = process.env.PORT || 4000;
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  introspection: true,
+  cors: {
+    origin: "*",
+    credentials: true,
+  },
 });
 
-server.listen().then(({ url }) => {
-  console.log(`🚀 서버가 ${url}에서 실행 중입니다`);
+server.listen(port).then(({ url }) => {
+  console.log(`🚀 Server ready at ${url}`);
 });
