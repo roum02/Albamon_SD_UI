@@ -1,4 +1,4 @@
-import { User, Gender } from "./types.js";
+import { User, Gender } from "../../types.js";
 
 // 임시 데이터 저장소
 let users: User[] = [
@@ -25,7 +25,7 @@ let users: User[] = [
   },
 ];
 
-export const resolvers = {
+export const userResolvers = {
   Query: {
     users: () => users,
     user: (_: any, { id }: { id: string }) =>

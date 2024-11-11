@@ -1,5 +1,5 @@
 export const userMutations = `
-type Mutation {
+  type Mutation {
     createUser(
       name: String!
       birthDate: String!
