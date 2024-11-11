@@ -1,4 +1,4 @@
-import { cardCollection } from "@/data/cardData.js";
+import { cardCollection } from "../../data/cardData.js";
 
 export const cardResolvers = {
   Query: {
