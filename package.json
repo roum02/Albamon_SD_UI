@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.0.2"
+  },
+  "scripts": {
+    "slide": "marp README.md"
+  }
+}
