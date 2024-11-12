@@ -1,13 +1,12 @@
-// /pages/index.tsx
 import React from 'react';
+import { MainTemplate } from '@templates/lib';
 
 const Home = () => {
-    return (
-        <div>
-            <h1>Welcome to Albamon_SD_UI</h1>
-            <p>This is the homepage.</p>
-        </div>
-    );
+  return (
+    <div>
+      <MainTemplate />
+    </div>
+  );
 };
 
 export default Home;
