@@ -8,7 +8,7 @@ import 'swiper/css/autoplay';
 import React from 'react';
 
 interface CardProps {
-cardData: CardDataProps;
+  cardData: CardDataProps;
 }
 
 interface CardDataProps {
@@ -21,34 +21,41 @@ interface CardDataProps {
 }
 
 export const CardList = ({ cardData }: CardProps) => {
-  const {collection = [], totalCount, column = 1, row = 1} = cardData || {};
+  const { collection = [], totalCount, column = 1, row = 1 } = cardData || {};
+  const cardsPerSlide = column * row;
+
+  // 데이터를 슬라이드 단위로 나눔
+  const slides = Array.from(
+    { length: Math.ceil(collection.length / cardsPerSlide) },
+    (_, i) => collection.slice(i * cardsPerSlide, (i + 1) * cardsPerSlide)
+  );
+
   return (
     <>
       {collection.length > 0 && (
         <Swiper
           //loop={totalCount > viewSize}
+          modules={[Pagination, Autoplay]}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
+          loop={true}
           className={classNames('swiper-wrap')}
         >
-          {collection.map((item, i) => (
-            <SwiperSlide key={`slide-${i}`}>
+          {slides.map((slideItems, slideIdx) => (
+            <SwiperSlide key={`slide-${slideIdx}`}>
               <section>
                 <div
-                    className={classNames('swiper-cards-wrap')}
-                     style={{
-                       display: 'grid',
-                       gridTemplateColumns: `repeat(${column}, 1fr)`,
-                       gridTemplateRows: `repeat(${row}, auto)`,
-                       gap: '10px',
-                     }}
+                  className={classNames('swiper-cards-wrap')}
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: `repeat(${column}, 1fr)`,
+                    gridTemplateRows: `repeat(${row}, auto)`,
+                    gap: '10px',
+                  }}
                 >
-                  {collection.map(
-                    (cardData: HomeBrandBannerBffResponse, idx: number) =>
-                      cardData === undefined ? (
-                        <div key={idx} className={classNames('card-wrap')} />
-                      ) : (
-                        <Card key={`card-${idx}`} {...cardData} />
-                      )
-                  )}
+                  {slideItems.map((item, idx) => (
+                    <Card key={`card-${slideIdx}-${idx}`} {...item} />
+                  ))}
                 </div>
               </section>
             </SwiperSlide>
