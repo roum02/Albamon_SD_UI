@@ -254,3 +254,8 @@ SDUI는 현대적인 앱 개발에서
 # ❓ Q&A
 
 궁금하신 점이 있으신가요?
+
+
+
+## React Query + GraphQL VS Apollo Client
+![output.png](/img/output.png)
