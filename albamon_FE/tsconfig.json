@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@templates/*": ["libs/templates/src/*"]
+      "@templates/*": ["libs/templates/src/*"],
+      "@components/*": ["libs/components/src/*"]
     },
     "target": "es5",
     "lib": [
