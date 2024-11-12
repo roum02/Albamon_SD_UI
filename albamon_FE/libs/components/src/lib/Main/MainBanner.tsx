@@ -37,8 +37,6 @@ interface BannerItem{
 export const MainBanner = ({ promotionBannerData }: MainBannerProps) => {
   const imageSlide = promotionBannerData.promotionBanners || [];
 
-  console.log(imageSlide)
-
   return (
       <div className={classNames('full-width', 'image-banner')}>
           <Swiper
@@ -51,7 +49,7 @@ export const MainBanner = ({ promotionBannerData }: MainBannerProps) => {
           >
               {imageSlide.map((item, index) => (
                   <SwiperSlide key={index}>
-                      {renderContent({src: item.bannerImageUrl, alt: item.alternateTitle})}
+                      {renderContent({src: item.bannerImageUrl, alt: item.alternateTitle, linkUrl: item.bannerLinkUrl})}
                   </SwiperSlide>
               ))}
           </Swiper>
@@ -60,17 +58,19 @@ export const MainBanner = ({ promotionBannerData }: MainBannerProps) => {
 };
 
 
-const renderContent = ({src, alt = ''}: BannerItem) => (
+const renderContent = ({src, alt = '', linkUrl}: BannerItem) => (
     <div className={'image-banner__box'}>
       {src && (
-          <img
-              // TODO 데이터의 이미지 경로 수정 필요!
-              //src={`${process.env['NEXT_PUBLIC_IMAGE_DEV']}${src}`}
-              src={`https:${src}`}
-              className={'image-banner__img'}
-              alt={alt}
-              style={{ width: '100%' }}
-          />
-      )}
-    </div>
-);
+          <a href={linkUrl} target="_blank" rel="noopener noreferrer">
+              <img
+                  // TODO 데이터의 이미지 경로 수정 필요!
+                  //src={`${process.env['NEXT_PUBLIC_IMAGE_DEV']}${src}`}
+                  src={`https:${src}`}
+                  className={'image-banner__img'}
+                  alt={alt}
+                  style={{width: '100%'}}
+              />
+          </a>
+              )}
+          </div>
+      );
