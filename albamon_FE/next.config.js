@@ -1,4 +1,10 @@
 // next.config.js
 module.exports = {
-    reactStrictMode: true,
+  reactStrictMode: true,
+  exportPathMap: async function (defaultPathMap) {
+    return {
+      ...defaultPathMap,
+      '/app': { page: '/app' },
+    };
+  },
 };

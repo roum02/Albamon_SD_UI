@@ -34,7 +34,7 @@ export const userResolvers = {
   Mutation: {
     createUser: (
       _: any,
-      { name, birthDate, gender, occupation }: Omit<User, "id">
+      { name, birthDate, gender, occupation }: Omit<User, "id">,
     ) => {
       const newUser: User = {
         id: String(users.length + 1),
