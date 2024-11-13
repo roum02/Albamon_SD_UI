@@ -8,7 +8,7 @@ export const bannerResolvers = {
           {
             bannerNo: 32,
             bannerImageUrl:
-              "//test-imgs.albamon.kr/images/main/mobile/promotion/202408/pqrizt19094431.png",
+              "https://test-imgs.albamon.kr/images/main/mobile/promotion/202408/pqrizt19094431.png",
             bannerTitle: "알바의 상식 테스트",
             alternateTitle: "알바의 상식 테스트",
             bannerLinkUrl: "https://m.albamon.com",
@@ -18,7 +18,7 @@ export const bannerResolvers = {
           {
             bannerNo: 7,
             bannerImageUrl:
-              "//test-imgs.albamon.kr/images/main/mobile/promotion/202405/jljhur20165855.png",
+              "https://test-imgs.albamon.kr/images/main/mobile/promotion/202405/jljhur20165855.png",
             bannerTitle: "ABTI 테스트",
             alternateTitle: "ABTI 테스트",
             bannerLinkUrl: "https://mts3.albamon.com/alba-talk/abti",
@@ -28,7 +28,7 @@ export const bannerResolvers = {
           {
             bannerNo: 33,
             bannerImageUrl:
-              "//test-imgs.albamon.kr/images/main/mobile/promotion/202408/lcjzlo20135733.jpg",
+              "https://test-imgs.albamon.kr/images/main/mobile/promotion/202408/lcjzlo20135733.jpg",
             bannerTitle: "보스몬 투표 테스트",
             alternateTitle: "보스몬 투표 테스트",
             bannerLinkUrl:
@@ -39,7 +39,7 @@ export const bannerResolvers = {
           {
             bannerNo: 31,
             bannerImageUrl:
-              "//test-imgs.albamon.kr/images/main/mobile/promotion/202408/xemnsz13094903.png",
+              "https://test-imgs.albamon.kr/images/main/mobile/promotion/202408/xemnsz13094903.png",
             bannerTitle: "눜 서비스홍보",
             alternateTitle: "눜 서비스홍보",
             bannerLinkUrl: "https://nooc.onelink.me/8L9K/92d7b9g7",
@@ -49,7 +49,7 @@ export const bannerResolvers = {
           {
             bannerNo: 36,
             bannerImageUrl:
-              "//test-imgs.albamon.kr/images/main/mobile/promotion/202411/pvpcyv07163350.png",
+              "https://test-imgs.albamon.kr/images/main/mobile/promotion/202411/pvpcyv07163350.png",
             bannerTitle: "누구나 할 수 있는 쿠팡",
             alternateTitle: "누구나 할 수 있는 쿠팡",
             bannerLinkUrl:
