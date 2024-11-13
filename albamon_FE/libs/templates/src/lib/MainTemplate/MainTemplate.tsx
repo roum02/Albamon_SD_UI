@@ -73,7 +73,7 @@ export const MainTemplate = () => {
 
   if (networkStatusCards === NetworkStatus.refetch) return <p>Refetching!</p>;
   if (loadingCards || loadingPromotion) return <p>Loading...</p>;
-  if (errorCards || errorPromotion) return <p>Error : {errorCards.message}</p>;
+  if (errorCards || errorPromotion) return <p>Error : {errorCards?.message}</p>;
 
   return (
     <div>
