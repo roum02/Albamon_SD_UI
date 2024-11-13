@@ -68,7 +68,7 @@ const renderContent = ({ src, alt = '', linkUrl }: BannerItem) => (
         <img
           // TODO 데이터의 이미지 경로 수정 필요!
           //src={`${process.env['NEXT_PUBLIC_IMAGE_DEV']}${src}`}
-          src={`https:${src}`}
+          src={src}
           className={'image-banner__img'}
           alt={alt}
           style={{ width: '100%' }}
