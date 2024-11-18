@@ -4,5 +4,6 @@
   },
   "scripts": {
     "slide": "marp README.md"
-  }
+  },
+  "license": "MIT"
 }
