@@ -7,6 +7,7 @@ export const eventResolvers = {
       return {
         resultCode: "SUCCESS",
         resultMessage: "성공",
+        eventId: eventId,
         components: [
           {
             type: "TITLE",
@@ -17,12 +18,11 @@ export const eventResolvers = {
             color: "#000000",
           },
           {
-            type: "ImageWithButtonComponent",
-            text: "알바몬 출석체크 이벤트",
-            fontSize: 24,
-            fontWeight: "bold",
-            textAlign: "center",
-            color: "#000000",
+            type: "IMAGE_WITH_BUTTON",
+            imageUrl: "https://picsum.photos/200/300",
+            buttonText: "알바몬 출석체크 이벤트",
+            buttonBackgroundColor: "#000000",
+            buttonTextColor: "#FFFFFF",
             children: [
               {
                 type: "BUTTON",
@@ -51,18 +51,16 @@ export const eventResolvers = {
             position: "fixed",
             bottom: 20,
           },
+          {
+            type: "FOOTER",
+            text: "알바몬 출석체크 이벤트",
+            fontSize: 24,
+            fontWeight: "bold",
+            textAlign: "center",
+            color: "#000000",
+          },
         ],
       };
-    },
-  },
-  Component: {
-    __resolveType(obj: any) {
-      if (obj.type === "TITLE") return "TitleComponent";
-      if (obj.type === "IMAGE") return "ImageComponent";
-      if (obj.type === "FLOATING_BUTTON") return "FloatingButtonComponent";
-      if (obj.type === "IMAGE_WITH_BUTTON") return "ImageWithButtonComponent";
-      if (obj.type === "BUTTON") return "ButtonComponent";
-      return null;
     },
   },
 };

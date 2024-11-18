@@ -1,4 +1,6 @@
 export const eventTypes = `
+  scalar JSON
+
   enum ComponentType {
     TITLE
     IMAGE
@@ -37,29 +39,16 @@ export const eventTypes = `
 
   type ImageWithButtonComponent {
     type: ComponentType!
-    imageUrl: String!
-    buttonText: String!
+    imageUrl: String
+    buttonText: String
     buttonBackgroundColor: String
     buttonTextColor: String
-    children: [Component!]!
   }
-
-  type ButtonComponent {
-    type: ComponentType!
-    text: String!
-    onClick: String!
-  }
-
-  union Component =
-    | TitleComponent
-    | ImageComponent
-    | FloatingButtonComponent
-    | ImageWithButtonComponent
-    | ButtonComponent
-
+  
   type ComponentResponse {
     resultCode: String!
     resultMessage: String!
-    components: [Component!]!
+    eventId: String!
+    components: [JSON!]
   }
 `;
