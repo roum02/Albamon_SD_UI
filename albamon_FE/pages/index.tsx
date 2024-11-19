@@ -1,10 +1,11 @@
 import React from 'react';
-import { MainTemplate } from '@templates/lib';
+import { EventTemplate, MainTemplate } from '@templates/lib';
 
 const Home = () => {
   return (
     <div>
       <MainTemplate />
+      <EventTemplate />
     </div>
   );
 };
