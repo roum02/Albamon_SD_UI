@@ -4,6 +4,7 @@ export const ImageWithButton = ({
   buttonBackgroundColor,
   buttonTextColor,
   children,
+  onClick,
 }) => (
   <div>
     <img src={imageUrl} alt="example" />

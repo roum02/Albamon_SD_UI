@@ -7,6 +7,13 @@ import {
   Title,
   Image,
 } from '@components/lib';
+import {
+  eventHandlers,
+  EventHandlerType,
+  EventUserType,
+} from '@utils/eventHandler';
+
+const EVENT_BUTTONS = ['BUTTON', 'FLOATING_BUTTON', 'IMAGE_WITH_BUTTON'];
 
 const MAPPED_COMPONENTS = {
   TITLE: Title,
@@ -16,10 +23,32 @@ const MAPPED_COMPONENTS = {
   FOOTER: Footer,
 };
 
+const handleButtonEvent = (
+  eventType: EventHandlerType,
+  params?: EventUserType
+) => {
+  const handler = eventHandlers.get(eventType);
+  if (handler) {
+    handler(params);
+  }
+};
+
 const RenderComponent = (data) => {
-  //console.log(data);
+  if (!data?.type) {
+    return;
+  }
   const Component = MAPPED_COMPONENTS[data.type];
-  return Component && <Component {...data} />;
+  return (
+    Component && (
+      <Component
+        {...data}
+        onClick={() => {
+          EVENT_BUTTONS.includes(data.type) &&
+            handleButtonEvent(data.type, { name: 'roum' });
+        }}
+      />
+    )
+  );
 };
 
 export const EventTemplate = () => {

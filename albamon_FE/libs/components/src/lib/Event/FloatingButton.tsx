@@ -4,6 +4,8 @@ export const FloatingButton = ({
   textColor,
   position,
   bottom,
+  // TODO 데이터 구조 변경 요청
+  onClick,
 }) => (
   <button
     style={{
@@ -12,6 +14,7 @@ export const FloatingButton = ({
       backgroundColor,
       color: textColor,
     }}
+    onClick={onClick}
   >
     {text}
   </button>

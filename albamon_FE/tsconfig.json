@@ -5,7 +5,8 @@
       "@templates/*": ["libs/templates/src/*"],
       "@components/*": ["libs/components/src/*"],
       "@apollo-client/*": ["libs/apollo-client/*"],
-      "@graphql/*": ["libs/graphql/*"]
+      "@graphql/*": ["libs/graphql/*"],
+      "@utils/*": ["libs/utils/*"],
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
