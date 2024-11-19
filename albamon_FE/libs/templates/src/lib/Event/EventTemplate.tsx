@@ -1,5 +1,26 @@
 import { useQuery } from '@apollo/client';
 import { GET_EVENT_LIST } from '@graphql/event';
+import {
+  FloatingButton,
+  Footer,
+  ImageWithButton,
+  Title,
+  Image,
+} from '@components/lib';
+
+const MAPPED_COMPONENTS = {
+  TITLE: Title,
+  IMAGE_WITH_BUTTON: ImageWithButton,
+  IMAGE: Image,
+  FLOATING_BUTTON: FloatingButton,
+  FOOTER: Footer,
+};
+
+const RenderComponent = (data) => {
+  //console.log(data);
+  const Component = MAPPED_COMPONENTS[data.type];
+  return Component && <Component {...data} />;
+};
 
 export const EventTemplate = () => {
   const {
@@ -21,107 +42,4 @@ export const EventTemplate = () => {
       ))}
     </>
   );
-};
-
-const Title = ({ text, fontSize, fontWeight, textAlign, color }) => (
-  <h1
-    style={{
-      fontSize,
-      fontWeight,
-      textAlign,
-      color,
-    }}
-  >
-    {text}
-  </h1>
-);
-
-const ImageWithButton = ({
-  imageUrl,
-  buttonText,
-  buttonBackgroundColor,
-  buttonTextColor,
-  children,
-}) => (
-  <div>
-    <img src={imageUrl} alt="example" />
-    <button
-      style={{
-        backgroundColor: buttonBackgroundColor,
-        color: buttonTextColor,
-      }}
-      onClick={() =>
-        children?.find((child) => child.type === 'BUTTON')?.onClick?.()
-      }
-    >
-      {buttonText}
-    </button>
-  </div>
-);
-
-const Image = ({
-  imageUrl,
-  backgroundColor,
-  paddingTop,
-  paddingBottom,
-  paddingLeft,
-  paddingRight,
-}) => (
-  <div
-    style={{
-      backgroundColor,
-      paddingTop,
-      paddingBottom,
-      paddingLeft,
-      paddingRight,
-    }}
-  >
-    <img src={imageUrl} alt="example" />
-  </div>
-);
-
-const FloatingButton = ({
-  text,
-  backgroundColor,
-  textColor,
-  position,
-  bottom,
-}) => (
-  <button
-    style={{
-      position,
-      bottom,
-      backgroundColor,
-      color: textColor,
-    }}
-  >
-    {text}
-  </button>
-);
-
-const Footer = ({ text, fontSize, fontWeight, textAlign, color }) => (
-  <footer
-    style={{
-      fontSize,
-      fontWeight,
-      textAlign,
-      color,
-    }}
-  >
-    {text}
-  </footer>
-);
-
-const MAPPED_COMPONENTS = {
-  TITLE: Title,
-  IMAGE_WITH_BUTTON: ImageWithButton,
-  IMAGE: Image,
-  FLOATING_BUTTON: FloatingButton,
-  FOOTER: Footer,
-};
-
-const RenderComponent = (data) => {
-  //console.log(data);
-  const Component = MAPPED_COMPONENTS[data.type];
-  return Component && <Component {...data} />;
 };
