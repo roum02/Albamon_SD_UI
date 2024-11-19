@@ -1,51 +1,13 @@
 import { CardList, MainBanner } from '@components/lib';
-import { gql, useLazyQuery, useQuery } from '@apollo/client';
-import { client } from '@apollo-client/client';
+import { useLazyQuery, useQuery } from '@apollo/client';
 import { NetworkStatus } from '@apollo/client';
+import { GET_CARDS, GET_PROMOTION_BANNER } from '@graphql/main';
 
 interface NextRequestInit extends RequestInit {
   next?: {
     revalidate: number;
   };
 }
-
-const GET_CARDS = gql`
-  query GetCards {
-    getCards {
-      resultCode
-      resultMessage
-      totalCount
-      row
-      column
-      collection {
-        franchiseCode
-        franchiseName
-        franchiseLogo
-        keywordCode
-        keywordName
-        partCode
-        partName
-      }
-    }
-  }
-`;
-
-const GET_PROMOTION_BANNER = gql`
-  query GetPromotionBanners {
-    getPromotionBanners {
-      promotionBannerCount
-      promotionBanners {
-        bannerImageUrl
-        bannerTitle
-        alternateTitle
-        appMenuNo
-        bannerBackGroundColor
-        bannerLinkUrl
-        bannerNo
-      }
-    }
-  }
-`;
 
 export const MainTemplate = () => {
   // client version
