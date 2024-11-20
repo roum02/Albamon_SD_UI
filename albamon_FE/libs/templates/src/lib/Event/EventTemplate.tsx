@@ -34,20 +34,23 @@ const handleButtonEvent = (
 };
 
 const RenderComponent = (data) => {
-  if (!data?.type) {
-    return;
-  }
+  if (!data?.type) return null;
+
   const Component = MAPPED_COMPONENTS[data.type];
+  if (!Component) return null;
+
   return (
-    Component && (
-      <Component
-        {...data}
-        onClick={() => {
-          EVENT_BUTTONS.includes(data.type) &&
-            handleButtonEvent(data.type, { name: 'roum' });
-        }}
-      />
-    )
+    <Component
+      {...data}
+      onClick={() => {
+        EVENT_BUTTONS.includes(data.type) &&
+          handleButtonEvent(data.type, { name: 'roum' });
+      }}
+    >
+      {data.children?.map((child, index) => (
+        <RenderComponent key={`${child.type}_${index}`} {...child} />
+      ))}
+    </Component>
   );
 };
 
