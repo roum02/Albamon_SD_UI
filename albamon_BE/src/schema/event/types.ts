@@ -7,6 +7,9 @@ export const eventTypes = `
     FLOATING_BUTTON
     IMAGE_WITH_BUTTON
     BUTTON
+    FOOTER
+    LIST
+    SPLIT
   }
 
   type TitleComponent {
@@ -44,7 +47,23 @@ export const eventTypes = `
     buttonBackgroundColor: String
     buttonTextColor: String
   }
-  
+    
+  type ListComponent {
+    type: String!
+    text: String!
+  }
+
+  type FooterComponent {
+    type: ComponentType!
+    text: String
+    fontSize: Int
+    fontWeight: String
+    textAlign: String
+    color: String
+    children: [ListComponent!]
+    backgroundColor: String
+  }
+
   type ComponentResponse {
     resultCode: String!
     resultMessage: String!
