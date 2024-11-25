@@ -7,9 +7,11 @@ export const eventTypes = `
     FLOATING_BUTTON
     IMAGE_WITH_BUTTON
     BUTTON
+    BUTTON_GROUP
     FOOTER
     LIST
     SPLIT
+    CAROUSEL
   }
 
   type TitleComponent {
@@ -29,6 +31,9 @@ export const eventTypes = `
     paddingBottom: Int
     paddingLeft: Int
     paddingRight: Int
+    textAlign: String
+    width: Int
+    height: Int
   }
 
   type FloatingButtonComponent {
@@ -42,10 +47,8 @@ export const eventTypes = `
 
   type ImageWithButtonComponent {
     type: ComponentType!
-    imageUrl: String
-    buttonText: String
-    buttonBackgroundColor: String
-    buttonTextColor: String
+    backgroundColor: String
+    children: [JSON!]
   }
     
   type ListComponent {
@@ -69,5 +72,39 @@ export const eventTypes = `
     resultMessage: String!
     eventId: String!
     components: [JSON!]
+  }
+
+  type ButtonComponent {
+    type: ComponentType!
+    text: String
+    backgroundColor: String
+    textColor: String
+    borderColor: String
+    height: Int
+    icon: [String]
+    onClick: String
+    color: String
+  }
+
+  type ButtonGroupComponent {
+    type: ComponentType!
+    backgroundColor: String
+    direction: String
+    justifyContent: String
+    gap: Int
+    buttons: [ButtonComponent!]
+  }
+
+  type CarouselComponent {
+    type: ComponentType!
+    children: [ImageComponent!]
+  }
+
+  type SplitComponent {
+    type: ComponentType!
+    paddingTop: Int
+    paddingBottom: Int
+    paddingLeft: Int
+    paddingRight: Int
   }
 `;
