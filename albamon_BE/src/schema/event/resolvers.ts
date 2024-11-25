@@ -2,7 +2,7 @@ export const eventResolvers = {
   Query: {
     getEventPageComponents: async (
       _: any,
-      { eventId }: { eventId: string }
+      { eventId }: { eventId: string },
     ) => {
       return {
         resultCode: "SUCCESS",
@@ -25,11 +25,13 @@ export const eventResolvers = {
           },
           {
             type: "IMAGE",
+            width: "100%",
             imageUrl:
               "https://img.albamon.kr/banner//2024/10/esrgoo28135334.png?v=1732498088001",
           },
           {
             type: "IMAGE",
+            width: "100%",
             backgroundColor: "#ff7e1d",
             paddingTop: 24,
             paddingBottom: 24,
@@ -40,6 +42,7 @@ export const eventResolvers = {
           },
           {
             type: "IMAGE",
+            width: "100%",
             backgroundColor: "#ff7e1d",
             paddingTop: 24,
             paddingBottom: 24,
@@ -50,6 +53,7 @@ export const eventResolvers = {
           },
           {
             type: "IMAGE",
+            width: "100%",
             backgroundColor: "#ff7e1d",
             paddingTop: 24,
             paddingBottom: 24,
@@ -124,6 +128,7 @@ export const eventResolvers = {
           },
           {
             type: "IMAGE",
+            width: "100%",
             imageUrl:
               "https://file3.jobkorea.co.kr/albamon/notice/2024/10/jpknmb04163852.png?v=1732498088001",
             backgroundColor: "#F5F5F5",
