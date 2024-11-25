@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+import styles from './index.module.scss';
 import { useQuery } from '@apollo/client';
 import { GET_EVENT_LIST } from '@graphql/event';
 import {
@@ -12,6 +14,9 @@ import {
   EventHandlerType,
   EventUserType,
 } from '@utils/eventHandler';
+
+const cx = classNames.bind(styles);
+const rootClass = 'event-template';
 
 const EVENT_BUTTONS = ['BUTTON', 'FLOATING_BUTTON', 'IMAGE_WITH_BUTTON'];
 
@@ -64,14 +69,16 @@ export const EventTemplate = () => {
     variables: { eventId: '1' },
   });
 
+  // console.log(eventList.getEventPageComponents.components);
+
   if (loading) return <p>loading...</p>;
   if (error) return <p>Error : {error?.message} </p>;
 
   return (
-    <>
+    <div className={cx(rootClass)}>
       {eventList.getEventPageComponents.components.map((item, index) => (
         <RenderComponent key={`${item.type}_${index}`} {...item} />
       ))}
-    </>
+    </div>
   );
 };
