@@ -75,15 +75,50 @@ export const eventResolvers = {
                 backgroundColor: "#000000",
                 text: "카카오톡으로 공유하기",
               },
+            ],
+          },
+          {
+            type: "SPLIT",
+            paddingTop: 0,
+            paddingBottom: 0,
+            paddingLeft: 24,
+            paddingRight: 24,
+          },
+          {
+            type: "IMAGE",
+            backgroundColor: "#fff",
+            paddingTop: 0,
+            paddingBottom: 0,
+            paddingLeft: 24,
+            paddingRight: 24,
+            textAlign: "center",
+            width: 260,
+            height: 21,
+            imageUrl:
+              "https://mts17-mc.albamon.kr/monimg/msa/assets/images/events/campusBattle/instagram.png",
+          },
+          {
+            type: "BUTTON_GROUP",
+            backgroundColor: "#fff",
+            direction: "row",
+            justifyContent: "center",
+            gap: 8,
+            buttons: [
               {
-                type: "SPLIT",
-                imageUrl:
-                  "https://mts17-mc.albamon.kr/monimg/msa/assets/images/events/campusBattle/split.png",
+                type: "BUTTON",
+                text: "이미지 다운로드",
+                backgroundColor: "#ffffff",
+                textColor: "#000000",
+                borderColor: "#e5e5e5",
+                height: 48,
               },
               {
-                type: "IMAGE",
-                imageUrl:
-                  "https://mts17-mc.albamon.kr/monimg/msa/assets/images/events/campusBattle/instagram.png",
+                type: "BUTTON",
+                text: "텍스트 복사하기",
+                backgroundColor: "#ffffff",
+                textColor: "#000000",
+                borderColor: "#e5e5e5",
+                height: 48,
               },
             ],
           },
@@ -96,6 +131,32 @@ export const eventResolvers = {
             paddingBottom: 24,
             paddingLeft: 24,
             paddingRight: 24,
+          },
+          {
+            type: "CAROUSEL",
+            children: [
+              {
+                type: "IMAGE",
+                width: 214,
+                height: 382,
+                imageUrl:
+                  "https://img.jobkorea.co.kr/Images/bbs_notice/2024/09/30/image2316jpg.jpg?v=1732498088001",
+              },
+              {
+                type: "IMAGE",
+                width: 214,
+                height: 382,
+                imageUrl:
+                  "https://img.jobkorea.co.kr/Images/bbs_notice/2024/09/30/image2320jpg.jpg?v=1732498088001",
+              },
+              {
+                type: "IMAGE",
+                width: 214,
+                height: 382,
+                imageUrl:
+                  "https://img.jobkorea.co.kr/Images/bbs_notice/2024/09/30/image2317jpg.jpg?v=1732498088001",
+              },
+            ],
           },
           {
             type: "FOOTER",
