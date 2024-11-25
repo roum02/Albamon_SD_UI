@@ -6,7 +6,7 @@ export const ImageWithButton = ({
   children,
   onClick,
 }) => {
-  console.log(children);
+  // console.log(children);
   return (
     <div>
       <img src={imageUrl} alt="example" />
