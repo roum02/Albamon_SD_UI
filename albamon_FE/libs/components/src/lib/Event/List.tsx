@@ -1,1 +1,10 @@
-export const List = ({}) => <div>list</div>;
+export const List = ({ text, fontSize, color }) => (
+  <div
+    style={{
+      fontSize,
+      color,
+    }}
+  >
+    {text}
+  </div>
+);
