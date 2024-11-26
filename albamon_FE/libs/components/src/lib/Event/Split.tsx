@@ -1,1 +1,3 @@
-export const Split = ({}) => <div>carousel</div>;
+export const Split = ({ ...props }) => {
+  return <div style={{ ...props }}>split</div>;
+};
