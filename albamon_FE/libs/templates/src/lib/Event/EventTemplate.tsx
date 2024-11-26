@@ -9,6 +9,7 @@ import {
   Title,
   Image,
   Split,
+  Group,
 } from '@components/lib';
 import {
   eventHandlers,
@@ -18,6 +19,7 @@ import {
 import DefaultLayout from 'pages/layout/DefaultLayout';
 import { List } from '@components/lib/Event/List/List';
 import { Carousel } from '@components/lib/Event/Carousel';
+import { Button } from '@components/lib/Event/Button';
 
 const cx = classNames.bind(styles);
 const rootClass = 'event-template';
@@ -27,7 +29,9 @@ const EVENT_BUTTONS = ['BUTTON', 'FLOATING_BUTTON', 'IMAGE_WITH_CHILDREN'];
 const MAPPED_COMPONENTS = {
   TITLE: Title,
   IMAGE_WITH_CHILDREN: ImageWithChildren,
+  GROUP: Group,
   IMAGE: Image,
+  BUTTON: Button,
   SPLIT: Split,
   CAROUSEL: Carousel,
   FLOATING_BUTTON: FloatingButton,
