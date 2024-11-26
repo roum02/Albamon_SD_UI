@@ -1,12 +1,22 @@
-export const Footer = ({ text, fontSize, fontWeight, textAlign, color }) => (
+export const Footer = ({
+  text,
+  backgroundColor,
+  color,
+  fontSize,
+  fontWeight,
+  textAlign,
+  children,
+}) => (
   <footer
     style={{
+      backgroundColor,
+      color,
       fontSize,
       fontWeight,
       textAlign,
-      color,
     }}
   >
     {text}
+    <div>{children}</div>
   </footer>
 );
