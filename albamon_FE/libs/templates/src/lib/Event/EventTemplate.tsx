@@ -16,7 +16,7 @@ import {
   EventUserType,
 } from '@utils/eventHandler';
 import DefaultLayout from 'pages/layout/DefaultLayout';
-import { List } from '@components/lib/Event/List';
+import { List } from '@components/lib/Event/List/List';
 import { Carousel } from '@components/lib/Event/Carousel';
 
 const cx = classNames.bind(styles);
