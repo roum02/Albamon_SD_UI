@@ -1,19 +1,9 @@
-import styled from 'styled-components';
-
-interface CarouselProps {
-  width?: string;
-  height?: string;
-  backgroundColor?: string;
-  padding?: string;
-}
-
-export const Carousel = (props: CarouselProps) => (
-  <CarouselWrapper {...props}>carousel</CarouselWrapper>
+export const Carousel = ({ ...props }) => (
+  <div
+    style={{
+      ...props,
+    }}
+  >
+    <div>Carousel</div>
+  </div>
 );
-
-const CarouselWrapper = styled.div<CarouselProps>`
-  width: ${(props) => props.width || '100%'};
-  height: ${(props) => props.height || 'auto'};
-  background-color: ${(props) => props.backgroundColor || 'transparent'};
-  padding: ${(props) => props.padding || '0'};
-`;
