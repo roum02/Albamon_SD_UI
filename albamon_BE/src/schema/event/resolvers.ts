@@ -26,6 +26,7 @@ export const eventResolvers = {
             fontSize: 16,
             fontWeight: "700",
             bottom: 20,
+            onClick: "handleFloatingButtonClick",
           },
           {
             type: "IMAGE",
