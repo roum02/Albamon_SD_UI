@@ -9,7 +9,6 @@ import {
   Title,
   Image,
   Split,
-  Carousel,
 } from '@components/lib';
 import {
   eventHandlers,
@@ -18,6 +17,7 @@ import {
 } from '@utils/eventHandler';
 import DefaultLayout from 'pages/layout/DefaultLayout';
 import { List } from '@components/lib/Event/List';
+import { Carousel } from '@components/lib/Event/Carousel';
 
 const cx = classNames.bind(styles);
 const rootClass = 'event-template';
@@ -52,19 +52,17 @@ const RenderComponent = (data) => {
   if (!Component) return null;
 
   return (
-    <DefaultLayout>
-      <Component
-        {...data}
-        onClick={() => {
-          EVENT_BUTTONS.includes(data.type) &&
-            handleButtonEvent(data.type, { name: 'roum' });
-        }}
-      >
-        {data.children?.map((child, index) => (
-          <RenderComponent key={`${child.type}_${index}`} {...child} />
-        ))}
-      </Component>
-    </DefaultLayout>
+    <Component
+      {...data}
+      onClick={() => {
+        EVENT_BUTTONS.includes(data.type) &&
+          handleButtonEvent(data.type, { name: 'roum' });
+      }}
+    >
+      {data.children?.map((child, index) => (
+        <RenderComponent key={`${child.type}_${index}`} {...child} />
+      ))}
+    </Component>
   );
 };
 
@@ -85,9 +83,11 @@ export const EventTemplate = () => {
 
   return (
     <div className={cx(rootClass)}>
-      {eventList.getEventPageComponents.components.map((item, index) => (
-        <RenderComponent key={`${item.type}_${index}`} {...item} />
-      ))}
+      <DefaultLayout>
+        {eventList.getEventPageComponents.components.map((item, index) => (
+          <RenderComponent key={`${item.type}_${index}`} {...item} />
+        ))}
+      </DefaultLayout>
     </div>
   );
 };
