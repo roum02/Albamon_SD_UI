@@ -2,7 +2,7 @@ export const eventResolvers = {
   Query: {
     getEventPageComponents: async (
       _: any,
-      { eventId }: { eventId: string },
+      { eventId }: { eventId: string }
     ) => {
       return {
         resultCode: "SUCCESS",
@@ -150,7 +150,33 @@ export const eventResolvers = {
           },
           {
             type: "CAROUSEL",
+            backgroundColor: "#ff7e1d",
+            paddingTop: 24,
+            paddingBottom: 24,
+            paddingLeft: 24,
+            paddingRight: 24,
             children: [
+              {
+                type: "IMAGE",
+                width: 214,
+                height: 382,
+                imageUrl:
+                  "https://img.jobkorea.co.kr/Images/bbs_notice/2024/09/30/image2316jpg.jpg?v=1732498088001",
+              },
+              {
+                type: "IMAGE",
+                width: 214,
+                height: 382,
+                imageUrl:
+                  "https://img.jobkorea.co.kr/Images/bbs_notice/2024/09/30/image2320jpg.jpg?v=1732498088001",
+              },
+              {
+                type: "IMAGE",
+                width: 214,
+                height: 382,
+                imageUrl:
+                  "https://img.jobkorea.co.kr/Images/bbs_notice/2024/09/30/image2317jpg.jpg?v=1732498088001",
+              },
               {
                 type: "IMAGE",
                 width: 214,
