@@ -6,6 +6,9 @@ export const Image = ({
   paddingLeft,
   paddingRight,
   width,
+  display,
+  justifyContent,
+  imageWidth,
   height,
   onClick,
 }) => (
@@ -16,8 +19,9 @@ export const Image = ({
       paddingBottom,
       paddingLeft,
       paddingRight,
-      width,
       height,
+      display,
+      justifyContent,
       boxSizing: 'border-box',
     }}
   >

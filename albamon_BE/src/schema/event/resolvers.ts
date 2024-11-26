@@ -117,7 +117,6 @@ export const eventResolvers = {
           {
             type: "GROUP",
             backgroundColor: "#ff7e1d",
-            width: "100%",
             paddingTop: 0,
             paddingBottom: 0,
             paddingLeft: 24,
@@ -125,17 +124,23 @@ export const eventResolvers = {
             children: [
               {
                 type: "IMAGE",
+                display: "flex",
+                justifyContent: "center",
                 backgroundColor: "#fff",
-                width: 260,
-                height: 21,
+                paddingTop: 24,
+                paddingBottom: 8,
+                width: "200px",
+                imageWidth: "200px",
                 imageUrl:
                   "https://mts17-mc.albamon.kr/monimg/msa/assets/images/events/campusBattle/instagram.png",
               },
               {
                 type: "GROUP",
                 backgroundColor: "#fff",
+                display: "flex",
                 direction: "row",
                 justifyContent: "center",
+                paddingBottom: 24,
                 gap: 8,
                 children: [
                   {
@@ -146,6 +151,8 @@ export const eventResolvers = {
                     textColor: "#000000",
                     borderColor: "#e5e5e5",
                     height: 48,
+                    borderRadius: 8,
+                    borderWidth: 1,
                   },
                   {
                     type: "BUTTON",
@@ -155,6 +162,8 @@ export const eventResolvers = {
                     textColor: "#000000",
                     borderColor: "#e5e5e5",
                     height: 48,
+                    borderRadius: 8,
+                    borderWidth: 1,
                   },
                 ],
               },

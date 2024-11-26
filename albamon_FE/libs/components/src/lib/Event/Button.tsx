@@ -10,6 +10,7 @@ export const Button = ({
   paddingLeft,
   paddingRight,
   paddingBottom,
+  borderWidth,
 }) => (
   <div
     style={{
@@ -21,6 +22,7 @@ export const Button = ({
       paddingBottom,
       boxSizing: 'border-box',
       backgroundColor,
+      borderWidth,
     }}
   >
     <button
@@ -31,6 +33,7 @@ export const Button = ({
         backgroundColor: buttonColor,
         borderRadius,
         border: 0,
+        borderWidth,
       }}
     >
       {text}
