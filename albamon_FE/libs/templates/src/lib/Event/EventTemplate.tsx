@@ -15,6 +15,7 @@ import {
   EventHandlerType,
   EventUserType,
 } from '@utils/eventHandler';
+import DefaultLayout from 'pages/layout/DefaultLayout';
 
 const cx = classNames.bind(styles);
 const rootClass = 'event-template';
@@ -48,17 +49,19 @@ const RenderComponent = (data) => {
   if (!Component) return null;
 
   return (
-    <Component
-      {...data}
-      onClick={() => {
-        EVENT_BUTTONS.includes(data.type) &&
-          handleButtonEvent(data.type, { name: 'roum' });
-      }}
-    >
-      {data.children?.map((child, index) => (
-        <RenderComponent key={`${child.type}_${index}`} {...child} />
-      ))}
-    </Component>
+    <DefaultLayout>
+      <Component
+        {...data}
+        onClick={() => {
+          EVENT_BUTTONS.includes(data.type) &&
+            handleButtonEvent(data.type, { name: 'roum' });
+        }}
+      >
+        {data.children?.map((child, index) => (
+          <RenderComponent key={`${child.type}_${index}`} {...child} />
+        ))}
+      </Component>
+    </DefaultLayout>
   );
 };
 
