@@ -16,6 +16,7 @@ import {
   EventUserType,
 } from '@utils/eventHandler';
 import DefaultLayout from 'pages/layout/DefaultLayout';
+import { List } from '@components/lib/Event/List';
 
 const cx = classNames.bind(styles);
 const rootClass = 'event-template';
@@ -30,6 +31,7 @@ const MAPPED_COMPONENTS = {
   CAROUSEL: 'carousel',
   FLOATING_BUTTON: FloatingButton,
   FOOTER: Footer,
+  LIST: List,
 };
 
 const handleButtonEvent = (
