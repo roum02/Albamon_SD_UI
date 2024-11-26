@@ -2,7 +2,7 @@ export const eventResolvers = {
   Query: {
     getEventPageComponents: async (
       _: any,
-      { eventId }: { eventId: string },
+      { eventId }: { eventId: string }
     ) => {
       return {
         resultCode: "SUCCESS",
@@ -71,16 +71,19 @@ export const eventResolvers = {
           {
             type: "IMAGE_WITH_CHILDREN",
             backgroundColor: "#ff7e1d",
-            paddingTop: 0,
-            paddingBottom: 0,
-            paddingLeft: 24,
-            paddingRight: 24,
+            paddingTop: 25,
+            paddingBottom: 25,
+            paddingLeft: 25,
+            paddingRight: 25,
             children: [
               {
                 type: "IMAGE",
                 backgroundColor: "#fff",
                 width: "100%",
-                padding: "24px",
+                paddingTop: 30,
+                paddingBottom: 30,
+                paddingLeft: 24,
+                paddingRight: 24,
                 imageUrl:
                   "https://mts17-mc.albamon.kr/monimg/msa/assets/images/events/campusBattle/share_top.png",
               },
@@ -92,8 +95,14 @@ export const eventResolvers = {
                 height: 46,
                 text: "카카오톡으로 공유하기",
                 color: "#ffffff",
-                backgroundColor: "#000000",
+                buttonColor: "#000000",
+                backgroundColor: "#fff",
+                fontSize: 16,
+                fontWeight: "700",
                 borderRadius: "8px",
+                paddingLeft: 24,
+                paddingRight: 24,
+                paddingBottom: 30,
               },
             ],
           },

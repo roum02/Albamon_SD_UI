@@ -5,17 +5,35 @@ export const Button = ({
   color,
   text,
   backgroundColor,
+  buttonColor,
   borderRadius,
+  paddingLeft,
+  paddingRight,
+  paddingBottom,
 }) => (
-  <button
+  <div
     style={{
-      width,
-      height,
-      color,
+      width: '100%',
+      margin: '0 auto',
+      textAlign: 'center',
+      paddingLeft,
+      paddingRight,
+      paddingBottom,
+      boxSizing: 'border-box',
       backgroundColor,
-      borderRadius,
     }}
   >
-    {text}
-  </button>
+    <button
+      style={{
+        width,
+        height,
+        color,
+        backgroundColor: buttonColor,
+        borderRadius,
+        border: 0,
+      }}
+    >
+      {text}
+    </button>
+  </div>
 );

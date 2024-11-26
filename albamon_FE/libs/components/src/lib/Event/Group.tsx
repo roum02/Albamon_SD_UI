@@ -15,7 +15,6 @@ export const Group = ({
         paddingTop,
         paddingBottom,
         paddingLeft,
-        paddingRight,
       }}
     >
       {children}
