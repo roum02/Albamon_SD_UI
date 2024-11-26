@@ -5,6 +5,11 @@ export const Group = ({
   paddingBottom,
   paddingLeft,
   paddingRight,
+  display,
+  direction,
+  justifyContent,
+  alignItems,
+  gap,
   children,
 }) => {
   return (
@@ -16,6 +21,11 @@ export const Group = ({
         paddingBottom,
         paddingLeft,
         paddingRight,
+        display,
+        direction,
+        justifyContent,
+        alignItems,
+        gap,
       }}
     >
       {children}

@@ -32,7 +32,7 @@ const MAPPED_COMPONENTS = {
   GROUP: Group,
   IMAGE: Image,
   BUTTON: Button,
-  SPLIT: Split,
+  // SPLIT: Split,
   CAROUSEL: Carousel,
   FLOATING_BUTTON: FloatingButton,
   FOOTER: Footer,

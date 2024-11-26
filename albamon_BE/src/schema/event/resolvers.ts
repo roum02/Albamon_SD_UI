@@ -99,10 +99,11 @@ export const eventResolvers = {
           },
           {
             type: "SPLIT",
-            paddingTop: 0,
-            paddingBottom: 0,
-            paddingLeft: 24,
-            paddingRight: 24,
+            backgroundColor: "#ff7e1d",
+            marginTop: 24,
+            marginBottom: 24,
+            marginLeft: 24,
+            marginRight: 24,
           },
           {
             type: "GROUP",
@@ -288,6 +289,7 @@ export const eventResolvers = {
           {
             type: "GROUP",
             backgroundColor: "#fff",
+            display: "flex",
             direction: "row",
             justifyContent: "center",
             alignItems: "center",
