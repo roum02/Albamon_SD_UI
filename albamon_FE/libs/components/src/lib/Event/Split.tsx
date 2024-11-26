@@ -1,15 +1,15 @@
-export const Split = ({ marginTop, marginBottom, marginLeft, marginRight }) => {
+export const Split = ({ backgroundColor, paddingLeft, paddingRight }) => {
   return (
-    <hr
-      style={{
-        width: '100%',
-        borderTop: '5px dashed #DDDDDD',
-        backgroundColor: '#fff',
-        marginTop,
-        marginBottom,
-        marginLeft,
-        marginRight,
-      }}
-    />
+    <div style={{ paddingLeft, paddingRight, backgroundColor }}>
+      <hr
+        style={{
+          width: '100%',
+          boxSizing: 'border-box',
+          borderTop: '3px dashed #DDDDDD',
+          backgroundColor,
+          margin: 0,
+        }}
+      />
+    </div>
   );
 };

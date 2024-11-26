@@ -32,7 +32,7 @@ const MAPPED_COMPONENTS = {
   GROUP: Group,
   IMAGE: Image,
   BUTTON: Button,
-  // SPLIT: Split,
+  SPLIT: Split,
   CAROUSEL: Carousel,
   FLOATING_BUTTON: FloatingButton,
   FOOTER: Footer,
@@ -92,6 +92,8 @@ export const EventTemplate = () => {
           <RenderComponent key={`${item.type}_${index}`} {...item} />
         ))}
       </DefaultLayout>
+      {/* Floating Button 마진*/}
+      <div style={{ height: '100px' }} />
     </div>
   );
 };

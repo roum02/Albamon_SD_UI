@@ -30,7 +30,7 @@ export const FloatingButton = ({
         borderRadius: 10,
         left: '50%',
         transform: 'translateX(-50%)',
-        maxWidth: 500,
+        maxWidth: 350,
         boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
       }}
       onClick={mapHandlerName(onClick)}

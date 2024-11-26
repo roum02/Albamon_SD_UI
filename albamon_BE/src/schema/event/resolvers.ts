@@ -71,10 +71,9 @@ export const eventResolvers = {
           {
             type: "IMAGE_WITH_CHILDREN",
             backgroundColor: "#ff7e1d",
-            paddingTop: 25,
-            paddingBottom: 25,
-            paddingLeft: 25,
-            paddingRight: 25,
+            paddingTop: 24,
+            paddingLeft: 24,
+            paddingRight: 24,
             children: [
               {
                 type: "IMAGE",
@@ -109,16 +108,14 @@ export const eventResolvers = {
           {
             type: "SPLIT",
             backgroundColor: "#ff7e1d",
-            marginTop: 24,
-            marginBottom: 24,
-            marginLeft: 24,
-            marginRight: 24,
+            paddingLeft: 24,
+            paddingRight: 24,
           },
           {
             type: "GROUP",
             backgroundColor: "#ff7e1d",
             paddingTop: 0,
-            paddingBottom: 0,
+            paddingBottom: 24,
             paddingLeft: 24,
             paddingRight: 24,
             children: [
