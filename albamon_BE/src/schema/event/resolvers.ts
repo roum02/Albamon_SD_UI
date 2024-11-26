@@ -21,11 +21,16 @@ export const eventResolvers = {
             text: "이벤트 참여하기",
             backgroundColor: "#ff7e1d",
             textColor: "#ffffff",
+            width: "80%",
+            height: 47,
+            fontSize: 16,
+            fontWeight: "700",
             bottom: 20,
           },
           {
             type: "IMAGE",
             width: "100%",
+            backgroundColor: "#ff7e1d",
             imageUrl:
               "https://img.albamon.kr/banner//2024/10/esrgoo28135334.png?v=1732498088001",
           },
