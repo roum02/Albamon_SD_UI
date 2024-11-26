@@ -9,6 +9,7 @@ import {
   Title,
   Image,
   Split,
+  Carousel,
 } from '@components/lib';
 import {
   eventHandlers,
@@ -28,7 +29,7 @@ const MAPPED_COMPONENTS = {
   IMAGE_WITH_CHILDREN: ImageWithChildren,
   IMAGE: Image,
   SPLIT: Split,
-  CAROUSEL: 'carousel',
+  CAROUSEL: Carousel,
   FLOATING_BUTTON: FloatingButton,
   FOOTER: Footer,
   LIST: List,
