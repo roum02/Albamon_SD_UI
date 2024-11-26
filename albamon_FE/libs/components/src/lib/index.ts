@@ -7,3 +7,4 @@ export * from '@components/lib/Event/Image';
 export * from '@components/lib/Event/ImageWithChildren';
 export * from '@components/lib/Event/Split';
 export * from '@components/lib/Event/Carousel';
+export * from '@components/lib/Event/Group';
