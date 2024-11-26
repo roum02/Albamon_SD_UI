@@ -1,12 +1,14 @@
-export const Split = ({ ...props }) => {
+export const Split = ({ marginTop, marginBottom, marginLeft, marginRight }) => {
   return (
-    <div
+    <hr
       style={{
         width: '100%',
-        boxSizing: 'border-box',
         borderTop: '5px dashed #DDDDDD',
         backgroundColor: '#fff',
-        ...props,
+        marginTop,
+        marginBottom,
+        marginLeft,
+        marginRight,
       }}
     />
   );
