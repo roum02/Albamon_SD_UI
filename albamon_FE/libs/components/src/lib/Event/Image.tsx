@@ -18,6 +18,7 @@ export const Image = ({
       paddingRight,
       width,
       height,
+      boxSizing: 'border-box',
     }}
   >
     <img src={imageUrl} alt="example" style={{ width }} />
