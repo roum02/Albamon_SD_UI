@@ -1,26 +1,43 @@
+import classNames from 'classnames';
+import styles from './index.module.scss';
 import { useQuery } from '@apollo/client';
 import { GET_EVENT_LIST } from '@graphql/event';
 import {
   FloatingButton,
   Footer,
-  ImageWithButton,
+  ImageWithChildren,
   Title,
   Image,
+  Split,
+  Group,
 } from '@components/lib';
 import {
   eventHandlers,
   EventHandlerType,
   EventUserType,
 } from '@utils/eventHandler';
+import DefaultLayout from 'pages/layout/DefaultLayout';
+import { List } from '@components/lib/Event/List/List';
+import { Carousel } from '@components/lib/Event/Carousel';
+import { Button } from '@components/lib/Event/Button';
+import { mapHandlerName } from '@utils/mapHandlerName';
 
-const EVENT_BUTTONS = ['BUTTON', 'FLOATING_BUTTON', 'IMAGE_WITH_BUTTON'];
+const cx = classNames.bind(styles);
+const rootClass = 'event-template';
+
+const EVENT_BUTTONS = ['BUTTON', 'FLOATING_BUTTON', 'IMAGE_WITH_CHILDREN'];
 
 const MAPPED_COMPONENTS = {
   TITLE: Title,
-  IMAGE_WITH_BUTTON: ImageWithButton,
+  IMAGE_WITH_CHILDREN: ImageWithChildren,
+  GROUP: Group,
   IMAGE: Image,
+  BUTTON: Button,
+  SPLIT: Split,
+  CAROUSEL: Carousel,
   FLOATING_BUTTON: FloatingButton,
   FOOTER: Footer,
+  LIST: List,
 };
 
 const handleButtonEvent = (
@@ -40,13 +57,7 @@ const RenderComponent = (data) => {
   if (!Component) return null;
 
   return (
-    <Component
-      {...data}
-      onClick={() => {
-        EVENT_BUTTONS.includes(data.type) &&
-          handleButtonEvent(data.type, { name: 'roum' });
-      }}
-    >
+    <Component {...data}>
       {data.children?.map((child, index) => (
         <RenderComponent key={`${child.type}_${index}`} {...child} />
       ))}
@@ -64,14 +75,20 @@ export const EventTemplate = () => {
     variables: { eventId: '1' },
   });
 
+  // console.log(eventList.getEventPageComponents.components);
+
   if (loading) return <p>loading...</p>;
   if (error) return <p>Error : {error?.message} </p>;
 
   return (
-    <>
-      {eventList.getEventPageComponents.components.map((item, index) => (
-        <RenderComponent key={`${item.type}_${index}`} {...item} />
-      ))}
-    </>
+    <div className={cx(rootClass)}>
+      <DefaultLayout>
+        {eventList.getEventPageComponents.components.map((item, index) => (
+          <RenderComponent key={`${item.type}_${index}`} {...item} />
+        ))}
+      </DefaultLayout>
+      {/* Floating Button 마진*/}
+      <div style={{ height: '100px' }} />
+    </div>
   );
 };
