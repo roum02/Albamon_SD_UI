@@ -11,7 +11,7 @@ SD-UI를 통하여 유연한 UI 제공
 
 ## 설계
 
-![업로드중..](blob:https://velog.io/ad66ff79-5516-4477-b49c-7fa16ca17991)
+<img width="684" alt="스크린샷 2024-11-27 오전 10 43 56" src="https://github.com/user-attachments/assets/1b7d5ed2-212f-409f-931f-8e415e319175">
 
 ## 서버에서 UI 다루기
 
@@ -67,7 +67,8 @@ export const GET_EVENT_LIST = gql`
      }
 ```
 
-![업로드중..](blob:https://velog.io/fa5884c8-225b-4748-b769-eb0f4a502f3f)
+
+<img width="443" alt="스크린샷 2024-11-27 오전 7 08 49" src="https://github.com/user-attachments/assets/019f1742-9ce0-4c8e-8cf2-7a0df1a101e7">
 
 ## 재사용 가능한 UI 컴포넌트
 서버에서 UI를 관리하면 유연성을 확보할 수 있지만, 사용하는 UI 요소의 재사용성을 고려하지 않으면 다양한 화면에서 UI 요소를 교체하기 어려워진다. 이러한 문제를 피하려면 모든 UI 요소를 재사용 가능한 컴포넌트로 구성하고, UI 컴포넌트를 다양한 화면에서 조립해서 사용할 수 있도록 만들어야 한다.
