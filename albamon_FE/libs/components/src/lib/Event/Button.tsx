@@ -1,3 +1,5 @@
+import { mapHandlerName } from '@utils/mapHandlerName';
+
 export const Button = ({
   onClick,
   width,
@@ -35,6 +37,7 @@ export const Button = ({
         border: 0,
         borderWidth,
       }}
+      onClick={mapHandlerName(onClick)}
     >
       {text}
     </button>

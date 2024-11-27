@@ -20,6 +20,7 @@ import DefaultLayout from 'pages/layout/DefaultLayout';
 import { List } from '@components/lib/Event/List/List';
 import { Carousel } from '@components/lib/Event/Carousel';
 import { Button } from '@components/lib/Event/Button';
+import { mapHandlerName } from '@utils/mapHandlerName';
 
 const cx = classNames.bind(styles);
 const rootClass = 'event-template';
@@ -56,13 +57,7 @@ const RenderComponent = (data) => {
   if (!Component) return null;
 
   return (
-    <Component
-      {...data}
-      onClick={() => {
-        EVENT_BUTTONS.includes(data.type) &&
-          handleButtonEvent(data.type, { name: 'roum' });
-      }}
-    >
+    <Component {...data}>
       {data.children?.map((child, index) => (
         <RenderComponent key={`${child.type}_${index}`} {...child} />
       ))}
