@@ -11,7 +11,8 @@ SD-UI를 통하여 유연한 UI 제공
 
 ## 설계
 
-<img width="684" alt="스크린샷 2024-11-27 오전 10 43 56" src="https://github.com/user-attachments/assets/1b7d5ed2-212f-409f-931f-8e415e319175">
+<img width="668" alt="스크린샷 2024-11-27 오전 11 18 27" src="https://github.com/user-attachments/assets/e0434d1b-f050-47ad-babb-7174ce5e6183">
+
 
 ## 서버에서 UI 다루기
 
