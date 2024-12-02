@@ -1,3 +1,10 @@
+```html
+<meta
+  name="description"
+  content="GraphQL과 Apollo Server로 SDUI 구현하기: REST API의 오버패칭 문제 해결과 서버 주도 UI 개발 경험 공유"
+/>
+```
+
 # 🔥 REST API 때려치우고 GraphQL, Apollo Server 도입한 후기
 
 안녕하세요!
